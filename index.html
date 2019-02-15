@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple Slider</title>
+</head>
+
+<body style="text-align: center; font-family: 'Roboto'; background-color: grey;">
+<h1>ILLUMINATIONS</h1>
+</body>
+<script type="text/javascript">
+	var i = 0;
+	var images = [];
+	var time = 3000;
+
+
+	images[0] = 'image1.jpeg';
+	images[1] = 'image2.jpeg';
+	images[2] = 'image3.jpeg';
+	images[3] = 'image4.jpeg';
+	images[4] = 'image5.jpeg';
+
+	//change image
+
+	function changeImg() {
+
+     document.slide.src = images[i];
+
+     if(i < images.length - 1){
+
+     	i++;
+     } else { i = 0; }
+
+     setTimeout("changeImg()", time);
+
+	}
+
+    window.onload = changeImg;
+
+</script>
+<img name="slide" width="540" height="880">
+</html>
